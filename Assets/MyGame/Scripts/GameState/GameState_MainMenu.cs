@@ -1,5 +1,4 @@
-using MyStudio.Framework;
-using UnityEngine;
+using MyStudio.Framework.GameState;
 
 namespace MyGame.Common
 {

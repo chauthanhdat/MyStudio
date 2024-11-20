@@ -1,4 +1,4 @@
-using MyStudio.Framework;
+using MyStudio.Framework.GameState;
 using MyStudio.Framework.GameSystem;
 using UnityEngine;
 

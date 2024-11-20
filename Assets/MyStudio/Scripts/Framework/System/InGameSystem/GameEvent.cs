@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace MyStudio.Framework.GameSystem
 {
     public class GameEvent<T>
