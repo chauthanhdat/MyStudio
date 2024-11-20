@@ -1,8 +1,9 @@
+using MyStudio.Framework.GameState;
 using MyStudio.Framework.GameSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace MyStudio.Framework.GameState
+namespace MyGame.Common
 {
     public class GameState_Init : GameState
     {

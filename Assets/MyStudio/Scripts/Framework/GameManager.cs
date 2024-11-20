@@ -37,13 +37,11 @@ namespace MyStudio.Framework.GameState
         private void InitSystem()
         {
             _systemGroup = new();
-            _systemGroup.RegisterSystem(new GameEventSystem());
         }
 
         private void InitGameStateMachine()
         {
             _gameStateMachine = new GameStateMachine();
-            _gameStateMachine.ChangeState(new GameState_Init());
         }
 
         public void ChangeState(IGameState newState)

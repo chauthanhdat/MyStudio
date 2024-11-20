@@ -8,9 +8,14 @@ namespace MyGame.Common
     {
         private void Start()
         {
-            GameManager.Instance.RegisterSystem<PlayFabSystem>(new());
-
+            SetupSystem();
             GameManager.Instance.ChangeState(new GameState_Init());
+        }
+
+        private void SetupSystem()
+        {
+            GameManager.Instance.RegisterSystem<PlayFabSystem>(new());
+            GameManager.Instance.RegisterSystem<GameEventSystem>(new());
         }
     }
 }
