@@ -2,7 +2,7 @@ using MyStudio.Framework.Interface;
 using MyStudio.Framework.GameSystem;
 using UnityEngine;
 
-namespace MyStudio.Framework
+namespace MyStudio.Framework.GameState
 {
     public class GameManager : MonoBehaviour
     {
@@ -25,13 +25,25 @@ namespace MyStudio.Framework
             _instance = this;
             DontDestroyOnLoad(this);
 
-            _gameStateMachine = new GameStateMachine();
-            _systemGroup = new();
+            InitSystem();
+            InitGameStateMachine();
         }
 
         private void Start()
         {
             Application.targetFrameRate = 60;
+        }
+
+        private void InitSystem()
+        {
+            _systemGroup = new();
+            _systemGroup.RegisterSystem(new GameEventSystem());
+        }
+
+        private void InitGameStateMachine()
+        {
+            _gameStateMachine = new GameStateMachine();
+            _gameStateMachine.ChangeState(new GameState_Init());
         }
 
         public void ChangeState(IGameState newState)

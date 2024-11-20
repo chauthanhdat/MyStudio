@@ -1,6 +1,6 @@
 using MyStudio.Framework.Interface;
 
-namespace MyStudio.Framework
+namespace MyStudio.Framework.GameState
 {
     public abstract class GameState : IGameState
     {

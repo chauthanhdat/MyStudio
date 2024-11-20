@@ -3,7 +3,7 @@ using MyStudio.Framework.GameSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace MyGame.Common
+namespace MyStudio.Framework.GameState
 {
     public class GameState_Init : GameState
     {
